@@ -24,6 +24,7 @@ function App() {
       </section>
     </Provider>
   );
+  
 }
 
 export default App;

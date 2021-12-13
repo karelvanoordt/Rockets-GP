@@ -23,9 +23,13 @@
     font-size: 40px;
 }
 
-.links {
+.links{
     margin-right: 30px;
     text-decoration: none;
     font-size: 20px;
     color: rgb(88, 186, 208);
+}
+
+.links:is(:active, :link, :visited).active {
+    text-decoration: underline;
 }
