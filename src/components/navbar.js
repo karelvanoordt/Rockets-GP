@@ -14,9 +14,9 @@ function NavBar() {
         </h1>
       </div>
         <nav className="nav">
-            <NavLink to="/*" className="links" activeClassName="links-active">Rockets</NavLink>
-            <NavLink to="/missions" className="links" activeClassName="links-active">Missions</NavLink>
-            <NavLink to="/myProfile" className="links" activeClassName="links-active">My profile</NavLink>
+            <NavLink to="/*" className="links links-active">Rockets</NavLink>
+            <NavLink to="/missions" className="links links-active">Missions</NavLink>
+            <NavLink to="/myProfile" className="links links-active">My profile</NavLink>
         </nav>
       </section>
     </header>

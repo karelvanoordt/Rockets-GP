@@ -1,41 +1,32 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getMISSIONS } from '../redux/pages/missions';
+import Mission from '../components/table'
 import '../styling/missions.css';
 
-function Missions() {  
-    const missionslist = useSelector((state) => state.missionsReducer);
-    const dispatch = useDispatch();
+function DisplayMissions() {
+  const missionslist = useSelector((state) => state.missionsReducer);
+  const dispatch = useDispatch();
   
-    useEffect(() => {
-      dispatch(getMISSIONS());
-    }, [dispatch]);
+  useEffect(() => {
+    dispatch(getMISSIONS());
+  }, [dispatch]);
 
     return (
         <div className="con">
-   <table>
- <tr>
+    <table>
+    <tr>
     <th>Mission</th>
     <th>Description</th>
     <th>Status</th>
     <th></th>
-  </tr>
-  {missionslist.map((mission) => (
-  <tr>
-    <td>{mission.title}</td>
-    <td className="m_d">{mission.description}</td>
-    <td>
-        <label className='status' style={{ textTransform: 'uppercase' }}>Not a member</label>
-    </td>
-    <td>
-        <button className='state'>Join Mission</button>
-    </td>
-  </tr>
-  ))}
-
-</table>
+    </tr>
+    {missionslist.map((mission) => (
+      <Mission key={mission.mission_id} mission={mission} />
+      ))}
+    </table>
         </div>
     )
 }
 
-export default Missions;
+export default DisplayMissions;
