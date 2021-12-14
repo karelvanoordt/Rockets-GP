@@ -1,0 +1,38 @@
+.con {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 95%;
+    font-size: 18px;
+  }
+  
+  td, th {
+    border: 1px solid #929292;
+    text-align: left;
+    padding: 16px 16px 20px 16px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #e8e8e8;
+  }
+
+  .state {
+    font-size: 18px;
+    border: 1px solid black !important;
+    padding: 6px 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  .m_d {
+      font-size: 16px;
+  }
+
+  .status {
+    white-space: nowrap; 
+  }
