@@ -1,35 +1,35 @@
 .H-con {
- border-bottom: 2px solid grey;
- padding: 15px 50px 15px 50px;
+  border-bottom: 2px solid grey;
+  padding: 15px 50px 15px 50px;
 }
 
 .text {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .app-logo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .app-logo img {
-    width: 75px;
-    margin-right: 20px;
+  width: 75px;
+  margin-right: 20px;
 }
 
 .app-logo h1 {
-    font-size: 40px;
+  font-size: 40px;
 }
 
-.links{
-    margin-right: 30px;
-    text-decoration: none;
-    font-size: 20px;
-    color: rgb(88, 186, 208);
+.links {
+  margin-right: 30px;
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(88, 186, 208);
 }
 
 .links:is(:active, :link, :visited).active {
-    text-decoration: underline;
+  text-decoration: underline;
 }

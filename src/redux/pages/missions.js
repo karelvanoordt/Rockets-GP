@@ -49,7 +49,6 @@ export const getMISSIONS = () => async (dispatch) => {
   function reserveValue(id) {
     const index = localDATA.findIndex((item) => item.id === id);
     if (index !== -1) {
-      console.log(localDATA[index].reserved);
       return localDATA[index].reserved;
     }
     return true;

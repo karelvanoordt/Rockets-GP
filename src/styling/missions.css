@@ -1,71 +1,73 @@
 .con {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0;
 }
+
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 95%;
-    font-size: 18px;
-  }
-  
-  td, th {
-    border: 1px solid #929292;
-    text-align: left;
-    padding: 16px 16px 20px 16px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #e8e8e8;
-  }
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 95%;
+  font-size: 18px;
+}
 
-  .state {
-    font-size: 16px;
-    border: 2px solid rgb(97, 97, 97) !important;
-    color: rgb(65, 65, 65) !important;
-    padding: 6px 12px;
-    border-radius: 4px;
-    white-space: nowrap;
-    background-color: transparent;
-  }
+td,
+th {
+  border: 1px solid #929292;
+  text-align: left;
+  padding: 16px 16px 20px 16px;
+}
 
-  .state_2 {
-    font-size: 16px;
-    border: 2px solid rgb(182, 48, 48) !important;
-    color: rgb(182, 48, 48) !important;
-    padding: 6px 12px;
-    border-radius: 4px;
-    white-space: nowrap;
-  }
+tr:nth-child(even) {
+  background-color: #e8e8e8;
+}
 
-  .m_d {
-      font-size: 16px;
-  }
+.state {
+  font-size: 16px;
+  border: 2px solid rgb(97, 97, 97) !important;
+  color: rgb(65, 65, 65) !important;
+  padding: 6px 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+  background-color: transparent;
+}
 
-  .status {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    white-space: nowrap;
-    background-color: rgb(97, 97, 97);
-    color: white;
-    padding: 5px;
-    border-radius: 10px;
-    font-size: 16px; 
-  }
+.state_2 {
+  font-size: 16px;
+  border: 2px solid rgb(182, 48, 48) !important;
+  color: rgb(182, 48, 48) !important;
+  padding: 6px 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
 
-  .status_2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    white-space: nowrap;
-    background-color: rgb(39, 148, 148);
-    color: white;
-    padding: 5px;
-    border-radius: 10px;
-    font-size: 16px; 
-  }
+.m_d {
+  font-size: 16px;
+}
+
+.status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  white-space: nowrap;
+  background-color: rgb(97, 97, 97);
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.status_2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  white-space: nowrap;
+  background-color: rgb(39, 148, 148);
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 16px;
+}

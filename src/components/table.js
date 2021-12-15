@@ -1,23 +1,22 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { joinMission, cancelMission, updateStatus } from '../redux/pages/missions';
 
-export default function Mission(mission) {
+export default function Mission({ mission }) {
   const dispatch = useDispatch();
 
   function eventHandler(e) {
     const btn = e.target.className;
     const { id } = e.target;
 
-    console.log(id);
-
     if (btn === 'state') {
-      dispatch(joinMission(mission.mission.id));
-      dispatch(updateStatus(mission.mission.id));
+      dispatch(joinMission(mission.id));
+      dispatch(updateStatus(mission.id));
       let arr = [];
       const obj = {
-        status: mission.mission.status,
-        id: mission.mission.id,
+        status: mission.status,
+        id: mission.id,
         reserved: false,
         bg: 'status_2',
       };
@@ -36,34 +35,36 @@ export default function Mission(mission) {
       }
       localStorage.setItem('statusData', JSON.stringify(arr));
     } else if (btn === 'state_2') {
-      dispatch(cancelMission(mission.mission.id));
-      dispatch(updateStatus(mission.mission.id));
+      dispatch(cancelMission(mission.id));
+      dispatch(updateStatus(mission.id));
       const arr1 = JSON.parse(localStorage.getItem('statusData'));
       const index = arr1.findIndex((item) => item.id === id);
-      console.log(index);
       arr1.splice(index, 1);
-      console.log(arr1);
       localStorage.setItem('statusData', JSON.stringify(arr1));
     }
   }
 
   function addBTN(state) {
     if (state) {
-      return <button id={mission.mission.id} className="state" onClick={eventHandler}>Join Mission</button>;
+      return <button type="button" id={mission.id} className="state" onClick={eventHandler}>Join Mission</button>;
     }
-    return <button id={mission.mission.id} className="state_2" onClick={eventHandler}>Leave Mission</button>;
+    return <button type="button" id={mission.id} className="state_2" onClick={eventHandler}>Leave Mission</button>;
   }
 
   return (
-    <tr key={mission.mission.id}>
-      <td>{mission.mission.title}</td>
-      <td className="m_d">{mission.mission.description}</td>
+    <tr key={mission.id}>
+      <td>{mission.title}</td>
+      <td className="m_d">{mission.description}</td>
       <td>
-        <label className={mission.mission.Bg}>{mission.mission.status}</label>
+        <p className={mission.Bg}>{mission.status}</p>
       </td>
       <td>
-        {addBTN(mission.mission.reserved)}
+        {addBTN(mission.reserved)}
       </td>
     </tr>
   );
 }
+
+Mission.propTypes = {
+  mission: PropTypes.string.isRequired,
+};

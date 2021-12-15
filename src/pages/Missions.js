@@ -19,7 +19,6 @@ function DisplayMissions() {
           <th>Mission</th>
           <th>Description</th>
           <th>Status</th>
-          <th />
         </tr>
         {missionslist.map((mission) => (
           <Mission key={mission.id} mission={mission} />

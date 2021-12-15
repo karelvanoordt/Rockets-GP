@@ -15,7 +15,7 @@ function Rockets() {
   return (
     <div className="rockets-main">
       {rocketslist.map((rocket) => (
-        <Rocket rocket={rocket} />
+        <Rocket key={rocket.id} rocket={rocket} />
       ))}
     </div>
   );
