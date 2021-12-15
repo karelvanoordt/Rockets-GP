@@ -4,22 +4,21 @@ import { getROCKETS } from '../redux/pages/rockets';
 import Rocket from '../components/rocket';
 import '../styling/rockets.css';
 
-function Rockets() {  
-    const rocketslist = useSelector((state) => state.rocketsReducer);
-    const dispatch = useDispatch();
-  
-    useEffect(() => {
-      dispatch(getROCKETS());
-    }, [dispatch]);
+function Rockets() {
+  const rocketslist = useSelector((state) => state.rocketsReducer);
+  const dispatch = useDispatch();
 
-    return (
-        <div className="rockets-main">
-        {rocketslist.map((rocket) => (
+  useEffect(() => {
+    dispatch(getROCKETS());
+  }, [dispatch]);
+
+  return (
+    <div className="rockets-main">
+      {rocketslist.map((rocket) => (
         <Rocket rocket={rocket} />
-        ))}
-        </div>
-    )
-};
-      
+      ))}
+    </div>
+  );
+}
 
 export default Rockets;
