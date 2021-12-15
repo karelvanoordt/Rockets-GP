@@ -22,8 +22,19 @@ table {
   }
 
   .state {
-    font-size: 18px;
-    border: 1px solid black !important;
+    font-size: 16px;
+    border: 2px solid rgb(97, 97, 97) !important;
+    color: rgb(65, 65, 65) !important;
+    padding: 6px 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    background-color: transparent;
+  }
+
+  .state_2 {
+    font-size: 16px;
+    border: 2px solid rgb(182, 48, 48) !important;
+    color: rgb(182, 48, 48) !important;
     padding: 6px 12px;
     border-radius: 4px;
     white-space: nowrap;
@@ -34,5 +45,27 @@ table {
   }
 
   .status {
-    white-space: nowrap; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    white-space: nowrap;
+    background-color: rgb(97, 97, 97);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 16px; 
+  }
+
+  .status_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    white-space: nowrap;
+    background-color: rgb(39, 148, 148);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 16px; 
   }

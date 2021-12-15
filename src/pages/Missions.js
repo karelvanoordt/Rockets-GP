@@ -22,7 +22,7 @@ function DisplayMissions() {
     <th></th>
     </tr>
     {missionslist.map((mission) => (
-      <Mission key={mission.mission_id} mission={mission} />
+      <Mission key={mission.id} mission={mission} />
       ))}
     </table>
         </div>
