@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getMISSIONS } from '../redux/pages/missions';
-import Mission from '../components/table';
+import Mission from '../components/mission';
 import '../styling/missions.css';
 
 function DisplayMissions() {

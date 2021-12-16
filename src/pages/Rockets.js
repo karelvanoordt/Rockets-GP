@@ -15,7 +15,13 @@ function Rockets() {
   return (
     <div className="rockets-main">
       {rocketslist.map((rocket) => (
-        <Rocket key={rocket.id} rocket={rocket} />
+        <Rocket
+          key={rocket.id}
+          RocketId={rocket.id}
+          rocketName={rocket.rocket_name}
+          flickrImages={rocket.flickr_images}
+          description={rocket.description}
+        />
       ))}
     </div>
   );

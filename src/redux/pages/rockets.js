@@ -15,6 +15,7 @@ export const getROCKETS = () => async (dispatch) => {
   const rocketsArr = [];
   ID.map((key) => rocketsArr.push({
     key,
+    id: key,
     rocket_name: rockets[key].rocket_name,
     description: rockets[key].description,
     flickr_images: rockets[key].flickr_images,
