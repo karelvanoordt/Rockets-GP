@@ -2,9 +2,9 @@ import React from 'react';
 import Navbar from '../navbar';
 
 const navbar = (
-        <Navbar />
-)
+  <Navbar />
+);
 
 it('renders correctly', () => {
-   expect(navbar).toMatchSnapshot();
+  expect(navbar).toMatchSnapshot();
 });

@@ -2,9 +2,9 @@ import React from 'react';
 import Rocket from '../rocket';
 
 const rocket = (
-        <Rocket />
-)
+  <Rocket />
+);
 
 it('renders correctly', () => {
-   expect(rocket).toMatchSnapshot();
+  expect(rocket).toMatchSnapshot();
 });

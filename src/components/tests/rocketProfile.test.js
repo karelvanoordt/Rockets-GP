@@ -2,9 +2,9 @@ import React from 'react';
 import RocketProfile from '../rocketProfile';
 
 const rocketProfile = (
-        <RocketProfile />
-)
+  <RocketProfile />
+);
 
 it('renders correctly', () => {
-   expect(rocketProfile).toMatchSnapshot();
+  expect(rocketProfile).toMatchSnapshot();
 });

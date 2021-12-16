@@ -2,9 +2,9 @@ import React from 'react';
 import Mission from '../mission';
 
 const mission = (
-        <Mission />
-)
+  <Mission />
+);
 
 it('renders correctly', () => {
-   expect(mission).toMatchSnapshot();
+  expect(mission).toMatchSnapshot();
 });
