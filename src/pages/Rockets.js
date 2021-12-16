@@ -21,6 +21,8 @@ function Rockets() {
           rocketName={rocket.rocket_name}
           flickrImages={rocket.flickr_images}
           description={rocket.description}
+          rocketStatus={rocket.status}
+          rocketReserved={rocket.reserved}
         />
       ))}
     </div>

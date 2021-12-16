@@ -4,7 +4,7 @@ import '../styling/missionsProfile.css';
 
 const RocketProfile = () => {
   const rockets = useSelector((state) => state.rocketsReducer);
-  const rocketsFiltered = rockets.filter((rocket) => rocket.reserved === true);
+  const rocketsFiltered = rockets.filter((rocket) => rocket.reserved === false);
   const norockets = rocketsFiltered.length <= 0;
 
   return (
@@ -15,7 +15,7 @@ const RocketProfile = () => {
             && <p>NO JOINED rockets</p>}
         <ul>
           {rocketsFiltered.map((rocket) => (
-            <li className="Pname" key={rocket.id}>{rocket.title}</li>
+            <li className="Pname" key={rocket.id}>{rocket.rocket_name}</li>
           ))}
         </ul>
       </section>
