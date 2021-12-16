@@ -19,7 +19,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://spacehub-karel-hamid.herokuapp.com/)
 
 
 ## Getting Started
