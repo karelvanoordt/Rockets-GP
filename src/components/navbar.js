@@ -10,7 +10,7 @@ function NavBar() {
         <div className="app-logo">
           <img src={planet} alt="account icon" />
           <h1>
-            Space Travelers`&apos Hub
+            Space Travelers` Hub
           </h1>
         </div>
         <nav className="nav">

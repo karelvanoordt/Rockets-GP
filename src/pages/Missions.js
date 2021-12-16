@@ -21,7 +21,15 @@ function DisplayMissions() {
           <th>Status</th>
         </tr>
         {missionslist.map((mission) => (
-          <Mission key={mission.id} mission={mission} />
+          <Mission
+            key={mission.id}
+            id={mission.id}
+            status={mission.status}
+            title={mission.title}
+            description={mission.description}
+            reserved={mission.reserved}
+            Bg={mission.Bg}
+          />
         ))}
       </table>
     </div>

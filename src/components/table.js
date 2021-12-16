@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { joinMission, cancelMission, updateStatus } from '../redux/pages/missions';
 
-export default function Mission({ mission }) {
+export default function Mission({
+  id, status, title, description, reserved, Bg,
+}) {
   const dispatch = useDispatch();
 
   function eventHandler(e) {
@@ -11,12 +13,12 @@ export default function Mission({ mission }) {
     const { id } = e.target;
 
     if (btn === 'state') {
-      dispatch(joinMission(mission.id));
-      dispatch(updateStatus(mission.id));
+      dispatch(joinMission(id));
+      dispatch(updateStatus(id));
       let arr = [];
       const obj = {
-        status: mission.status,
-        id: mission.id,
+        status,
+        id,
         reserved: false,
         bg: 'status_2',
       };
@@ -35,8 +37,8 @@ export default function Mission({ mission }) {
       }
       localStorage.setItem('statusData', JSON.stringify(arr));
     } else if (btn === 'state_2') {
-      dispatch(cancelMission(mission.id));
-      dispatch(updateStatus(mission.id));
+      dispatch(cancelMission(id));
+      dispatch(updateStatus(id));
       const arr1 = JSON.parse(localStorage.getItem('statusData'));
       const index = arr1.findIndex((item) => item.id === id);
       arr1.splice(index, 1);
@@ -46,25 +48,30 @@ export default function Mission({ mission }) {
 
   function addBTN(state) {
     if (state) {
-      return <button type="button" id={mission.id} className="state" onClick={eventHandler}>Join Mission</button>;
+      return <button type="button" id={id} className="state" onClick={eventHandler}>Join Mission</button>;
     }
-    return <button type="button" id={mission.id} className="state_2" onClick={eventHandler}>Leave Mission</button>;
+    return <button type="button" id={id} className="state_2" onClick={eventHandler}>Leave Mission</button>;
   }
 
   return (
-    <tr key={mission.id}>
-      <td>{mission.title}</td>
-      <td className="m_d">{mission.description}</td>
+    <tr key={id}>
+      <td>{title}</td>
+      <td className="m_d">{description}</td>
       <td>
-        <p className={mission.Bg}>{mission.status}</p>
+        <p className={Bg}>{status}</p>
       </td>
       <td>
-        {addBTN(mission.reserved)}
+        {addBTN(reserved)}
       </td>
     </tr>
   );
 }
 
 Mission.propTypes = {
-  mission: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  status: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  reserved: PropTypes.bool.isRequired,
+  Bg: PropTypes.string.isRequired,
 };
