@@ -10,7 +10,6 @@ import Rockets from './pages/Rockets';
 import NavBar from './components/navbar';
 import store from './redux/configureStore';
 
-
 function App() {
   return (
     <Provider store={store}>
@@ -24,7 +23,6 @@ function App() {
       </section>
     </Provider>
   );
-  
 }
 
 export default App;
