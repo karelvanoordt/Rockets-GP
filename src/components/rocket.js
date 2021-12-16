@@ -48,9 +48,9 @@ export default function Rocket({
 
   function addBTN(state) {
     if (state) {
-      return <button type="button" id={RocketId} className="state" onClick={eventHandler}>Reserve Rocket</button>;
+      return <button type="button" id={RocketId} className="rckt-state" onClick={eventHandler}>Reserve Rocket</button>;
     }
-    return <button type="button" id={RocketId} className="state_2" onClick={eventHandler}>Cancel Reservation</button>;
+    return <button type="button" id={RocketId} className="rckt-state_2" onClick={eventHandler}>Cancel Reservation</button>;
   }
 
   return (
