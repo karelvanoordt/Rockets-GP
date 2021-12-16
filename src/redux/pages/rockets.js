@@ -30,9 +30,7 @@ export const updateStatus = (payload) => (
 
 let localDATA = [{
   id: '',
-  reserved: true,
-  status: 'Cancel Reservation',
-  Bg: 'status',
+  reserved: false,
 }];
 
 export const getROCKETS = () => async (dispatch) => {
@@ -49,21 +47,7 @@ export const getROCKETS = () => async (dispatch) => {
     if (index !== -1) {
       return localDATA[index].reserved;
     }
-    return true;
-  }
-
-  function statusValue(reserve) {
-    if (reserve) {
-      return 'Reserve Rocket';
-    }
-    return 'Cancel Reservation';
-  }
-
-  function BgValue(reserve) {
-    if (reserve) {
-      return 'status_2';
-    }
-    return 'status';
+    return false;
   }
 
   ID.map((key) => rocketsArr.push({
@@ -73,12 +57,8 @@ export const getROCKETS = () => async (dispatch) => {
     description: rockets[key].description,
     flickr_images: rockets[key].flickr_images,
     reserved: reserveValue(rockets[key].rocket_id),
-    status: statusValue(reserveValue(rockets[key].rocket_id)),
-    Bg: BgValue(reserveValue(rockets[key].reserved)),
-
   }));
   dispatch(getRockets(rocketsArr));
-  console.log(ID.map((key) => reserveValue(rockets[key].reserved)));
 };
 
 const rocketsReducer = (state = initialState, action) => {
@@ -97,9 +77,9 @@ const rocketsReducer = (state = initialState, action) => {
       return state.map((rocket) => {
         if (rocket.id === action.payload) {
           if (rocket.status === 'Reserve Rocket') {
-            return { ...rocket, status: 'Cancel Reservation', Bg: 'status_2' };
+            return { ...rocket, status: 'Cancel Reservation', Bg: 'Rbadge_2' };
           } if (rocket.status === 'Cancel Reservation') {
-            return { ...rocket, status: 'Reserve Rocket', Bg: 'status' };
+            return { ...rocket, status: 'Reserve Rocket', Bg: 'Rbadge' };
           }
         }
         return rocket;

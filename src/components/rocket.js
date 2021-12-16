@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { bookRocket, cancelRocket, updateStatus } from '../redux/pages/rockets';
 
 export default function Rocket({
-  RocketId, flickrImages, rocketName, description, rocketStatus, rocketReserved,
+  RocketId, flickrImages, rocketName, description, rocketReserved,
 }) {
   const dispatch = useDispatch();
 
@@ -12,15 +12,13 @@ export default function Rocket({
     const btn = e.target.className;
     const { id } = e.target;
 
-    if (btn === 'state') {
+    if (btn === 'Rbadge') {
       dispatch(bookRocket(RocketId));
       dispatch(updateStatus(RocketId));
       let arr = [];
       const obj = {
-        status: rocketStatus,
         id: RocketId,
         reserved: true,
-        bg: 'status_2',
       };
       arr.push(obj);
       if (localStorage.getItem('statusData') !== null) {
@@ -36,7 +34,7 @@ export default function Rocket({
         });
       }
       localStorage.setItem('statusData', JSON.stringify(arr));
-    } else if (btn === 'state_2') {
+    } else if (btn === 'Rbadge_2') {
       dispatch(cancelRocket(RocketId));
       dispatch(updateStatus(RocketId));
       const arr1 = JSON.parse(localStorage.getItem('statusData'));
@@ -48,9 +46,9 @@ export default function Rocket({
 
   function addBTN(state) {
     if (state) {
-      return <button type="button" id={RocketId} className="rckt-state" onClick={eventHandler}>Reserve Rocket</button>;
+      return <button type="button" id={RocketId} className="Rbadge_2" onClick={eventHandler}>Cancel Reservation</button>;
     }
-    return <button type="button" id={RocketId} className="rckt-state_2" onClick={eventHandler}>Cancel Reservation</button>;
+    return <button type="button" id={RocketId} className="Rbadge" onClick={eventHandler}>Reserve Rocket</button>;
   }
 
   return (
@@ -78,6 +76,5 @@ Rocket.propTypes = {
   flickrImages: PropTypes.string.isRequired,
   rocketName: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  rocketStatus: PropTypes.string.isRequired,
   rocketReserved: PropTypes.bool.isRequired,
 };

@@ -4,7 +4,7 @@ import '../styling/missionsProfile.css';
 
 const RocketProfile = () => {
   const rockets = useSelector((state) => state.rocketsReducer);
-  const rocketsFiltered = rockets.filter((rocket) => rocket.reserved === false);
+  const rocketsFiltered = rockets.filter((rocket) => rocket.reserved === true);
   const norockets = rocketsFiltered.length <= 0;
 
   return (
