@@ -15,7 +15,7 @@ const RocketProfile = () => {
             && <p>NO JOINED rockets</p>}
         <ul>
           {rocketsFiltered.map((rocket) => (
-            <li className="Pname" key={rocket.id}>{rocket.title}</li>
+            <li className="Pname" key={rocket.id}>{rocket.rocket_name}</li>
           ))}
         </ul>
       </section>
