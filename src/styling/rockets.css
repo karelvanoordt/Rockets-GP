@@ -37,3 +37,13 @@
   background-color: green;
   cursor: pointer;
 }
+
+.rckt-res-badge {
+  display: inline-block;
+  background-color: rgb(21, 152, 175);
+  padding: 0.2rem;
+  font-size: 0.7rem;
+  color: white;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+}

@@ -51,6 +51,13 @@ export default function Rocket({
     return <button type="button" id={RocketId} className="Rbadge" onClick={eventHandler}>Reserve Rocket</button>;
   }
 
+  function addBadge(rocketReserved) {
+    if (rocketReserved === true) {
+      return <div className="rckt-res-badge">Reserved</div>;
+    }
+    return '';
+  }
+
   return (
     <div className="rocket-container">
       <div className="rocket-img-col">
@@ -62,7 +69,7 @@ export default function Rocket({
       <div className="rocket-info-col">
         <h2 className="rocket-title">{rocketName}</h2>
         <p className="rocket-description">
-          <span className="rocket-reserved" />
+          <span className="rocket-reserved">{addBadge(rocketReserved, description)}</span>
           {description}
         </p>
         <span className="rocket-reserve-btn">{addBTN(rocketReserved)}</span>
