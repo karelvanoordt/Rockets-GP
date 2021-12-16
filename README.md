@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Space Hub 
 
-## Available Scripts
+> A SpaceX missions and rockets web application made with React, Redux and APIs. This project was created by Hamid Murambiwa and Karel van Oordt for Microverse's module 3.
 
-In the project directory, you can run:
+![preview 1](./space-1.png)
+![preview 2](./space-2.png)
+![preview 3](./space-3.png)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Built With
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- React.js
+- Redux
+- JavaScript
+- CSS3
+- API
 
-### `npm test`
+## Live Demo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Live Demo Link](https://livedemo.com)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**To clone this project**
+**Run command: ```$git clone ``` [repo](https://github.com/karelvanoordt/rockets-gp.git)**
+**or press the green Code button in the upper right corner and choose to download from the Download ZIP link.**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Prerequisites
 
-### `npm run eject`
+- Code editor (VS Code, Sublime, Atom)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Setup
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- to create a React application is using Create React App (CRA) and following the instructions in this [guide](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app)
+```
+npx create-react-app bookstore-react
+cd bookstore-react
+npm start
+```
+-  Add React Redux
+ ```
+npm install react-redux
+```
+- Add React Router [React Router](https://v5.reactrouter.com/web/guides/quick-start)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Authors
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+👤 **Hamid Murambiwa**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- GitHub: [@hamid-murambiwa](https://github.com/hamid-murambiwa)
+- Twitter: [@twitterhandle](https://twitter.com/Hamid87789454)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/hamid-murambiwa/)
+- AngelList: [AngelList Profile](https://angel.co/u/hamid-murambiwa)
 
-### Code Splitting
+👤 **Karel van Oordt**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- GitHub: [@karelvanoordt](https://github.com/karelvanoordt)
+- Twitter: [@karelvanoordt](https://twitter.com/karelvanoordt)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/karel-van-oordt)
+- AngelList: [AngelList Profile](https://angel.co/u/karelvanoordt)
 
-### Analyzing the Bundle Size
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Contributions, issues, and feature requests are welcome!
 
-### Making a Progressive Web App
+Feel free to check the [issues page](https://github.com/karelvanoordt/rockets-gp/issues/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Show your support
 
-### Advanced Configuration
+Give a ⭐️ if you like this project!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📝 License
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](./MIT.md) licensed.
